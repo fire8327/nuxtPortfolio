@@ -2,6 +2,7 @@
 declare module 'vue' {
   export interface GlobalComponents {
     'Card': typeof import("../components/Card.vue")['default']
+    'CoopOptions': typeof import("../components/CoopOptions.vue")['default']
     'Cursor': typeof import("../components/Cursor.vue")['default']
     'Follow': typeof import("../components/Follow.vue")['default']
     'Footer': typeof import("../components/Footer.vue")['default']
@@ -29,6 +30,7 @@ declare module 'vue' {
     'Html': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Html']
     'Body': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
     'LazyCard': typeof import("../components/Card.vue")['default']
+    'LazyCoopOptions': typeof import("../components/CoopOptions.vue")['default']
     'LazyCursor': typeof import("../components/Cursor.vue")['default']
     'LazyFollow': typeof import("../components/Follow.vue")['default']
     'LazyFooter': typeof import("../components/Footer.vue")['default']
@@ -59,6 +61,7 @@ declare module 'vue' {
 }
 
 export const Card: typeof import("../components/Card.vue")['default']
+export const CoopOptions: typeof import("../components/CoopOptions.vue")['default']
 export const Cursor: typeof import("../components/Cursor.vue")['default']
 export const Follow: typeof import("../components/Follow.vue")['default']
 export const Footer: typeof import("../components/Footer.vue")['default']
@@ -86,6 +89,7 @@ export const Head: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Html']
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 export const LazyCard: typeof import("../components/Card.vue")['default']
+export const LazyCoopOptions: typeof import("../components/CoopOptions.vue")['default']
 export const LazyCursor: typeof import("../components/Cursor.vue")['default']
 export const LazyFollow: typeof import("../components/Follow.vue")['default']
 export const LazyFooter: typeof import("../components/Footer.vue")['default']
