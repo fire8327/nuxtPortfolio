@@ -51,6 +51,12 @@
             </div>
         </div>  
     </div>
+    <div class="flex max-lg:flex-col items-center gap-6 lg:gap-8 py-6 lg:py-8 border-y border-[#131313]/60 dark:border-[#f9f9f9]/60">
+        <div class="w-full lg:w-1/2 uppercase text-lg text-[#131313]/60 dark:text-[#f9f9f9]/60">
+            <p>Начните создавать кастомные адаптивные сайты вместе со мной прямо сейчас. Всего за пару действий вы получите быстрые и прозводительные сайты, которые идеально соответствуют <span class="text-transparent !bg-clip-text text-xl animate-text">вашим</span> потребностям.</p>
+        </div>
+        <img src="images/create/main.png" alt="" class="w-full lg:w-1/2">
+    </div>
     <NewProject/>
     <div class="flex flex-col items-center gap-6 lg:gap-8">
         <p class="text-2xl md:text-3xl lg:text-4xl uppercase">Кейсы</p>

@@ -27,6 +27,7 @@
                 <li class="text-2xl md:text-3xl lg:text-4xl link w-fit"><NuxtLink to="/">Главная</NuxtLink></li>
                 <li class="text-2xl md:text-3xl lg:text-4xl link w-fit"><NuxtLink to="/">Портфолио</NuxtLink></li>
                 <li class="text-2xl md:text-3xl lg:text-4xl link w-fit"><NuxtLink to="/">Обо мне</NuxtLink></li>
+                <li class="text-2xl md:text-3xl lg:text-4xl link w-fit"><NuxtLink to="/">Связаться со мной</NuxtLink></li>
                 <li class="text-2xl md:text-3xl lg:text-4xl link w-fit"><NuxtLink to="/">Api</NuxtLink></li>
             </ul>
             <div class="w-px h-5/6 dark:bg-[#f9f9f9]/25 bg-[#131313]/30 max-lg:w-5/6 max-lg:h-px"></div>
