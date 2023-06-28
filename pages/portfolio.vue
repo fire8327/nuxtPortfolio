@@ -2,7 +2,7 @@
     <div class="flex flex-col gap-6 lg:gap-8 items-center">
         <p class="text-2xl md:text-3xl lg:text-4xl uppercase">Профессиональное творчество</p>
         <p class="text-sm text-[#131313]/60 dark:text-[#f9f9f9]/60 uppercase">Мои работы - ваше впечатление</p>        
-        <NuxtLink to="/" class="flex items-center gap-4 w-fit rounded-full relative p-2 group">
+        <NuxtLink to="/feedback" class="flex items-center gap-4 w-fit rounded-full relative p-2 group">
             <Icon name="material-symbols:arrow-forward-ios-rounded" class="text-lg z-10 dark:text-[#131313] text-[#f9f9f9]"/>
             <span class="uppercase text-sm tracking-widest z-10 transition-colors duration-500 group-hover:dark:text-[#131313] group-hover:text-[#f9f9f9]">Начать проект</span>
             <span class="absolute rounded-full dark:bg-[#f9f9f9] bg-[#131313] h-full w-9 z-0 left-0 top-0 transition-all duration-500 group-hover:w-full"></span>

@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col min-h-screen justify-center bg-cover bg-[url(images/feedback/main.jpg)] w-full col-span-full -mt-20 bg-center relative bg-fixed">
         <div class="wrapper flex flex-col gap-8 md:gap-12 lg:gap-16 z-10 items-center">            
-            <p class="text-2xl md:text-3xl lg:text-4xl text-center uppercase text-[#f9f9f9]">Связаться со мной</p>
+            <p class="text-2xl md:text-3xl lg:text-4xl text-center uppercase text-[#f9f9f9]">Связаться со мной чтобы</p>
             <FormKit id="feedback" @submit="feedback" type="form" form-class="text-base rounded-xl mx-auto flex flex-col gap-4 w-full items-center md:w-2/3 lg:w-1/2 p-6 lg:p-10 border border-[#131313]/60 dark:border-[#f9f9f9]/60 bg-[#f9f9f9] dark:bg-[#131313]" :actions="false">
                 <FormKit name="name" validation="required" label="Имя" type="text" label-class="$remove:text-sm" message-class="uppercase" outer-class="w-full" wrapper-class="w-full" inner-class="$remove:focus-within:ring-blue-500 $remove:max-w-md w-full" input-class="$remove:text-gray-700" placeholder="Иван"></FormKit>
                 <FormKit name="email" validation="required|email" label="Почта" type="email" label-class="$remove:text-sm" message-class="uppercase" outer-class="w-full" wrapper-class="w-full" inner-class="$remove:focus-within:ring-blue-500 $remove:max-w-md w-full" input-class="$remove:text-gray-700" placeholder="user@example.com"></FormKit>

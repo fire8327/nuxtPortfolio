@@ -28,7 +28,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
             <Card/>
         </div>
-        <NuxtLink to="/" class="flex items-center self-end gap-4 w-fit rounded-full relative p-2 group">
+        <NuxtLink to="/portfolio" class="flex items-center self-end gap-4 w-fit rounded-full relative p-2 group">
             <Icon name="material-symbols:arrow-forward-ios-rounded" class="text-lg z-10 dark:text-[#131313] text-[#f9f9f9]"/>
             <span class="uppercase text-sm tracking-widest z-10 transition-colors duration-500 group-hover:dark:text-[#131313] group-hover:text-[#f9f9f9]">Посмотреть ещё</span>
             <span class="absolute rounded-full dark:bg-[#f9f9f9] bg-[#131313] h-full w-9 z-0 left-0 top-0 transition-all duration-500 group-hover:w-full"></span>

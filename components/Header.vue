@@ -25,9 +25,9 @@
         <div class="flex max-lg:flex-col h-full gap-6 items-center py-20 relative">
             <ul class="z-10 w-full lg:w-1/2 xl:w-[65%] flex flex-col max-lg:items-center h-full justify-center gap-8 md:gap-12 lg:gap-16 lg:list-decimal-leading-zero list-inside marker:text-base marker:dark:text-[#f9f9f9]/25 marker:text-[#131313]/30">
                 <li class="text-2xl md:text-3xl lg:text-4xl link w-fit"><NuxtLink to="/">Главная</NuxtLink></li>
-                <li class="text-2xl md:text-3xl lg:text-4xl link w-fit"><NuxtLink to="/">Портфолио</NuxtLink></li>
-                <li class="text-2xl md:text-3xl lg:text-4xl link w-fit"><NuxtLink to="/">Обо мне</NuxtLink></li>
-                <li class="text-2xl md:text-3xl lg:text-4xl link w-fit"><NuxtLink to="/">Связаться со мной</NuxtLink></li>
+                <li class="text-2xl md:text-3xl lg:text-4xl link w-fit"><NuxtLink to="/portfolio">Портфолио</NuxtLink></li>
+                <li class="text-2xl md:text-3xl lg:text-4xl link w-fit"><NuxtLink to="/about">Обо мне</NuxtLink></li>
+                <li class="text-2xl md:text-3xl lg:text-4xl link w-fit"><NuxtLink to="/feedback">Связаться со мной</NuxtLink></li>
                 <li class="text-2xl md:text-3xl lg:text-4xl link w-fit"><NuxtLink to="/">Api</NuxtLink></li>
             </ul>
             <div class="w-px h-5/6 dark:bg-[#f9f9f9]/25 bg-[#131313]/30 max-lg:w-5/6 max-lg:h-px"></div>
