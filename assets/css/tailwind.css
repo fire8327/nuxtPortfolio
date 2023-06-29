@@ -4,7 +4,7 @@
 
 @layer base {
     #__nuxt {
-        @apply font-Inter bg-[#f9f9f9] dark:bg-[#131313] text-[#131313] dark:text-[#f9f9f9] bg-[url(images/body/bg_white.png)] dark:bg-[url(images/body/bg_black.png)] bg-fixed font-semibold min-h-screen overflow-x-hidden flex flex-col
+        @apply font-Inter bg-[#f9f9f9] dark:bg-[#131313] text-[#131313] dark:text-[#f9f9f9] bg-[url(/images/body/bg_white.png)] dark:bg-[url(/images/body/bg_black.png)] bg-fixed font-semibold min-h-screen overflow-x-hidden flex flex-col
     }
 
     :root{
