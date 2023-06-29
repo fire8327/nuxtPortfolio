@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col min-h-screen justify-center bg-cover bg-[url(images/feedback/main.jpg)] w-full col-span-full -mt-20 bg-center relative bg-fixed">
+    <div class="flex flex-col min-h-screen justify-center bg-cover bg-[url(/images/feedback/main.jpg)] w-full col-span-full -mt-20 bg-center relative bg-fixed">
         <div class="wrapper flex flex-col gap-8 md:gap-12 lg:gap-16 z-10 items-center">            
             <p class="text-2xl md:text-3xl lg:text-4xl text-center uppercase text-[#f9f9f9]">Связаться со мной чтобы</p>
             <FormKit id="feedback" @submit="feedback" type="form" form-class="text-base rounded-xl mx-auto flex flex-col gap-4 w-full items-center md:w-2/3 lg:w-1/2 p-6 lg:p-10 border border-[#131313]/60 dark:border-[#f9f9f9]/60 bg-[#f9f9f9] dark:bg-[#131313]" :actions="false">
