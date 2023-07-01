@@ -1,7 +1,7 @@
 <template>
     <header class="w-full py-2 top-0 left-0 duration-500 transition-all fixed z-50 grid-container" :class="{'-translate-y-full' : isScrollDown, 'bg-[#f9f9f9] dark:bg-[#131313]' : isMenuColor}">
         <div class="flex items-center justify-between">
-            <NuxtLink to="/">
+            <NuxtLink to="/" @click="isMenuShow = false">
                 <img src="/images/header/logo.jpg" alt="" class="rounded-full w-14">
             </NuxtLink>      
             <div class="flex items-center gap-4">
@@ -24,11 +24,11 @@
     <div class="fixed inset-0 bg-[#f9f9f9] dark:bg-[#131313] bg-[url(/images/body/bg_white.png)] dark:bg-[url(/images/body/bg_black.png)] bg-fixed grid-container h-full transition-transform duration-500 z-40" :class="{'-translate-y-[1000px]' : !isMenuShow}">
         <div class="flex max-lg:flex-col h-full gap-6 items-center py-20 relative">
             <ul class="z-10 w-full lg:w-1/2 xl:w-[65%] flex flex-col max-lg:items-center h-full justify-center gap-8 md:gap-12 lg:gap-16 lg:list-decimal-leading-zero list-inside marker:text-base marker:dark:text-[#f9f9f9]/25 marker:text-[#131313]/30">
-                <li class="text-2xl md:text-3xl lg:text-4xl link w-fit"><NuxtLink @click="isMenuShow = !isMenuShow" to="/">Главная</NuxtLink></li>
-                <li class="text-2xl md:text-3xl lg:text-4xl link w-fit"><NuxtLink @click="isMenuShow = !isMenuShow" to="/portfolio">Портфолио</NuxtLink></li>
-                <li class="text-2xl md:text-3xl lg:text-4xl link w-fit"><NuxtLink @click="isMenuShow = !isMenuShow" to="/about">Обо мне</NuxtLink></li>
-                <li class="text-2xl md:text-3xl lg:text-4xl link w-fit"><NuxtLink @click="isMenuShow = !isMenuShow" to="/feedback">Связаться со мной</NuxtLink></li>
-                <li class="text-2xl md:text-3xl lg:text-4xl link w-fit"><NuxtLink @click="isMenuShow = !isMenuShow" to="/">Api</NuxtLink></li>
+                <li class="text-2xl md:text-3xl lg:text-4xl link w-fit"><NuxtLink @click="isMenuShow = false" to="/">Главная</NuxtLink></li>
+                <li class="text-2xl md:text-3xl lg:text-4xl link w-fit"><NuxtLink @click="isMenuShow = false" to="/portfolio">Портфолио</NuxtLink></li>
+                <li class="text-2xl md:text-3xl lg:text-4xl link w-fit"><NuxtLink @click="isMenuShow = false" to="/about">Обо мне</NuxtLink></li>
+                <li class="text-2xl md:text-3xl lg:text-4xl link w-fit"><NuxtLink @click="isMenuShow = false" to="/feedback">Связаться со мной</NuxtLink></li>
+                <li class="text-2xl md:text-3xl lg:text-4xl link w-fit"><NuxtLink @click="isMenuShow = false" to="/">Api</NuxtLink></li>
             </ul>
             <div class="w-px h-5/6 dark:bg-[#f9f9f9]/25 bg-[#131313]/30 max-lg:w-5/6 max-lg:h-px"></div>
             <div class="z-10 w-full lg:w-1/2 xl:w-[35%] flex flex-col max-lg:items-center h-full justify-center gap-8 md:gap-12 lg:gap-16 text-lg">
