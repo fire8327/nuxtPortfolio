@@ -61,7 +61,7 @@
 	+ `<b>Имя:</b> ${forms.name}\n`
     + `<b>Email:</b> ${forms.email}\n`
     + `<b>Сообщение:</b> ${forms.desc}\n`
-	const {data, error} = useFetch(URL,{
+	const {data, error} = await useFetch(URL,{
 		body:{
 			'chat_id': chat_id,
 			'parse_mode': 'html',
