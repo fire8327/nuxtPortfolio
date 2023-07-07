@@ -66,7 +66,7 @@
     <div class="flex flex-col items-center gap-6 lg:gap-8">
         <p class="text-2xl md:text-3xl lg:text-4xl uppercase">Новый уровень создания сайтов</p>
         <p class="text-sm uppercase text-[#131313]/60 dark:text-[#f9f9f9]/60">Всё, что вам нужно. В одном месте</p>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 uppercase">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 uppercase">
             <div class="flex flex-col gap-4 items-center text-center">
                 <div class="p-6 rounded-xl overflow-hidden border border-[#131313]/60 dark:border-[#f9f9f9]/60">
                     <Icon name="carbon:auto-scroll" class="text-5xl"/>

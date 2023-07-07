@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col gap-6 lg:gap-8 items-center">
-        <p class="text-2xl md:text-3xl lg:text-4xl uppercase">Профессиональное творчество</p>
+        <p class="text-2xl md:text-3xl lg:text-4xl uppercase text-center">Профессиональное творчество</p>
         <p class="text-sm text-[#131313]/60 dark:text-[#f9f9f9]/60 uppercase">Мои работы - ваше впечатление</p>        
         <NuxtLink to="/feedback" class="flex items-center gap-4 w-fit rounded-full relative p-2 group">
             <Icon name="material-symbols:arrow-forward-ios-rounded" class="text-lg z-10 dark:text-[#131313] text-[#f9f9f9]"/>
