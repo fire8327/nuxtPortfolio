@@ -8,11 +8,15 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "@nuxtjs/google-fonts",
     "@vueuse/motion/nuxt",
-    "nuxt-icons"
+    "nuxt-icons",
+    "@nuxt/content"
   ],
   googleFonts: {
     families: {
         'Inter': true
     }
+  },
+  vue: {
+    propsDestructure: true
   }
 })
