@@ -26,7 +26,7 @@
     <div class="flex flex-col items-center gap-6 lg:gap-8">
         <p class="text-2xl md:text-3xl lg:text-4xl uppercase">Кейсы</p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
-            <Card v-for="site in data" v-bind="site"/>            
+            <Card v-for="site in examples" v-bind="site"/>            
         </div>
         <NuxtLink to="/portfolio" class="flex items-center self-end gap-4 w-fit rounded-full relative p-2 group">
             <Icon name="material-symbols:arrow-forward-ios-rounded" class="text-lg z-10 dark:text-[#131313] text-[#f9f9f9]"/>
@@ -44,5 +44,6 @@
 
     const supabase = useSupabaseClient()   
     const { data } = await supabase.from('examples').select()
+    const examples = data.slice(0,4)
 
 </script>

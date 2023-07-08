@@ -85,7 +85,6 @@
 		lang: 'ru'
 	})
 
-    const {data, error} = await useAsyncData(() => queryContent("/sites").findOne(), {        
-        transform:(data)=> data.body.reverse()
-    })
+    const supabase = useSupabaseClient()   
+    const { data } = await supabase.from('examples').select()
 </script>
