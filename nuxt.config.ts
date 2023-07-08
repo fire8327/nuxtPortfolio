@@ -9,7 +9,8 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "@vueuse/motion/nuxt",
     "nuxt-icons",
-    "@nuxt/content"
+    "@nuxt/content",
+    '@nuxtjs/supabase'
   ],
   googleFonts: {
     families: {

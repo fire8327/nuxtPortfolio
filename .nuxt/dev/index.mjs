@@ -4,7 +4,7 @@ import { tmpdir } from 'node:os';
 import { join as join$1 } from 'node:path';
 import { mkdirSync } from 'node:fs';
 import { parentPort, threadId } from 'node:worker_threads';
-import { defineEventHandler, handleCacheHeaders, createEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, setResponseStatus, getRequestHeader, setResponseHeader, getRequestHeaders, getQuery as getQuery$1, getCookie, createError, createApp, createRouter as createRouter$1, toNodeListener, fetchWithEvent, lazyEventHandler } from 'file://C:/Users/fire8/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/Projects/nuxtPortfolio/node_modules/h3/dist/index.mjs';
+import { defineEventHandler, handleCacheHeaders, createEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, setResponseStatus, getRequestHeader, setResponseHeader, getRequestHeaders, assertMethod, readBody, setCookie, getQuery as getQuery$1, getCookie, createError, createApp, createRouter as createRouter$1, toNodeListener, fetchWithEvent, lazyEventHandler } from 'file://C:/Users/fire8/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/Projects/nuxtPortfolio/node_modules/h3/dist/index.mjs';
 import { createRenderer } from 'file://C:/Users/fire8/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/Projects/nuxtPortfolio/node_modules/vue-bundle-renderer/dist/runtime.mjs';
 import { stringify, uneval } from 'file://C:/Users/fire8/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/Projects/nuxtPortfolio/node_modules/devalue/index.js';
 import { renderToString } from 'file://C:/Users/fire8/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/Projects/nuxtPortfolio/node_modules/vue/server-renderer/index.mjs';
@@ -252,6 +252,25 @@ const _inlineRuntimeConfig = {
           1
         ]
       }
+    },
+    "supabase": {
+      "url": "https://sqovgnvsvfrlijbxlztc.supabase.co",
+      "key": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNxb3ZnbnZzdmZybGlqYnhsenRjIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODg3NzgyMzMsImV4cCI6MjAwNDM1NDIzM30.s0cs5zNw1DGyl_yFwvglOHQQz4uMHyinWoOZQz1sB58",
+      "client": {
+        "auth": {
+          "detectSessionInUrl": true,
+          "persistSession": true,
+          "autoRefreshToken": true
+        }
+      },
+      "redirect": false,
+      "cookies": {
+        "name": "sb",
+        "lifetime": 28800,
+        "domain": "",
+        "path": "/",
+        "sameSite": "lax"
+      }
     }
   },
   "motion": {},
@@ -330,6 +349,9 @@ const _inlineRuntimeConfig = {
       "clientDB": false,
       "stripQueryParameters": false
     }
+  },
+  "supabase": {
+    "serviceKey": ""
   }
 };
 const ENV_PREFIX = "NITRO_";
@@ -665,9 +687,9 @@ function cloneWithProxy(obj, overrides) {
 }
 const cachedEventHandler = defineCachedEventHandler;
 
-const config = useRuntimeConfig();
+const config$1 = useRuntimeConfig();
 const _routeRulesMatcher = toRouteMatcher(
-  createRouter({ routes: config.nitro.routeRules })
+  createRouter({ routes: config$1.nitro.routeRules })
 );
 function createRouteRulesHandler() {
   return eventHandler((event) => {
@@ -848,6 +870,74 @@ const errorHandler = (async function errorhandler(error, event) {
   }
   setResponseStatus(event, res.status && res.status !== 200 ? res.status : void 0, res.statusText);
   event.node.res.end(await res.text());
+});
+
+function buildAssetsURL(...path) {
+  return joinURL(publicAssetsURL(), useRuntimeConfig().app.buildAssetsDir, ...path);
+}
+function publicAssetsURL(...path) {
+  const publicBase = useRuntimeConfig().app.cdnURL || useRuntimeConfig().app.baseURL;
+  return path.length ? joinURL(publicBase, ...path) : publicBase;
+}
+
+const config = useRuntimeConfig().public;
+const _11rdwK = defineEventHandler(async (event) => {
+  assertMethod(event, "POST");
+  const body = await readBody(event);
+  const cookieOptions = config.supabase.cookies;
+  const { event: signEvent, session } = body;
+  if (!event) {
+    throw new Error("Auth event missing!");
+  }
+  if (signEvent === "SIGNED_IN" || signEvent === "TOKEN_REFRESHED") {
+    if (!session) {
+      throw new Error("Auth session missing!");
+    }
+    setCookie(
+      event,
+      `${cookieOptions.name}-access-token`,
+      session.access_token,
+      {
+        domain: cookieOptions.domain,
+        maxAge: cookieOptions.lifetime ?? 0,
+        path: cookieOptions.path,
+        sameSite: cookieOptions.sameSite
+      }
+    );
+    setCookie(event, `${cookieOptions.name}-refresh-token`, session.refresh_token, {
+      domain: cookieOptions.domain,
+      maxAge: cookieOptions.lifetime ?? 0,
+      path: cookieOptions.path,
+      sameSite: cookieOptions.sameSite
+    });
+    if (session.provider_token) {
+      setCookie(event, `${cookieOptions.name}-provider-token`, session.provider_token, {
+        domain: cookieOptions.domain,
+        maxAge: cookieOptions.lifetime ?? 0,
+        path: cookieOptions.path,
+        sameSite: cookieOptions.sameSite
+      });
+    }
+    if (session.provider_refresh_token) {
+      setCookie(event, `${cookieOptions.name}-provider-refresh-token`, session.provider_refresh_token, {
+        domain: cookieOptions.domain,
+        maxAge: cookieOptions.lifetime ?? 0,
+        path: cookieOptions.path,
+        sameSite: cookieOptions.sameSite
+      });
+    }
+  }
+  if (signEvent === "SIGNED_OUT") {
+    setCookie(event, `${cookieOptions.name}-access-token`, "", {
+      maxAge: -1,
+      path: cookieOptions.path
+    });
+    setCookie(event, `${cookieOptions.name}-refresh-token`, "", {
+      maxAge: -1,
+      path: cookieOptions.path
+    });
+  }
+  return "auth cookie set";
 });
 
 const get = (obj, path) => path.split(".").reduce((acc, part) => acc && acc[part], obj);
@@ -3645,14 +3735,6 @@ const getPreview = (event) => {
   return { key };
 };
 
-function buildAssetsURL(...path) {
-  return joinURL(publicAssetsURL(), useRuntimeConfig().app.buildAssetsDir, ...path);
-}
-function publicAssetsURL(...path) {
-  const publicBase = useRuntimeConfig().app.cdnURL || useRuntimeConfig().app.baseURL;
-  return path.length ? joinURL(publicBase, ...path) : publicBase;
-}
-
 async function getContentIndex(event) {
   const defaultLocale = useRuntimeConfig().content.defaultLocale;
   let contentIndex = await cacheStorage.getItem("content-index.json");
@@ -4082,6 +4164,7 @@ const _lazy_IGC9cR = () => Promise.resolve().then(function () { return renderer$
 
 const handlers = [
   { route: '/__nuxt_error', handler: _lazy_IGC9cR, lazy: true, middleware: false, method: undefined },
+  { route: '/api/_supabase/session', handler: _11rdwK, lazy: false, middleware: false, method: undefined },
   { route: '/api/_content/query/:qid/**:params', handler: _1nwhaY, lazy: false, middleware: false, method: "get" },
   { route: '/api/_content/query/:qid', handler: _1nwhaY, lazy: false, middleware: false, method: "get" },
   { route: '/api/_content/query', handler: _1nwhaY, lazy: false, middleware: false, method: "get" },
