@@ -239,9 +239,9 @@ declare module 'nuxt/schema' {
    },
 
    supabase: {
-      url: string,
+      url: any,
 
-      key: string,
+      key: any,
 
       client: {
          auth: {
