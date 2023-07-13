@@ -80,11 +80,12 @@
 </template>
 
 <script setup>
+    import { createClient } from '@supabase/supabase-js'
     useServerSeoMeta({
 		title: 'Портфолио',
 		lang: 'ru'
 	})
 
-    const supabase = useSupabaseClient()   
+    const supabase = createClient('https://sqovgnvsvfrlijbxlztc.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNxb3ZnbnZzdmZybGlqYnhsenRjIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODg3NzgyMzMsImV4cCI6MjAwNDM1NDIzM30.s0cs5zNw1DGyl_yFwvglOHQQz4uMHyinWoOZQz1sB58') 
     const { data } = await supabase.from('examples').select()
 </script>
