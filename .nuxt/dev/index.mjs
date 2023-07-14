@@ -254,8 +254,8 @@ const _inlineRuntimeConfig = {
       }
     },
     "supabase": {
-      "url": "",
-      "key": "",
+      "url": "https://sqovgnvsvfrlijbxlztc.supabase.co",
+      "key": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNxb3ZnbnZzdmZybGlqYnhsenRjIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODg3NzgyMzMsImV4cCI6MjAwNDM1NDIzM30.s0cs5zNw1DGyl_yFwvglOHQQz4uMHyinWoOZQz1sB58",
       "client": {
         "auth": {
           "detectSessionInUrl": true,

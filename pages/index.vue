@@ -44,7 +44,7 @@
 	})
 
     
-    const supabase = createClient('https://sqovgnvsvfrlijbxlztc.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNxb3ZnbnZzdmZybGlqYnhsenRjIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODg3NzgyMzMsImV4cCI6MjAwNDM1NDIzM30.s0cs5zNw1DGyl_yFwvglOHQQz4uMHyinWoOZQz1sB58') 
+    const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY) 
     const { data } = await supabase.from('examples').select()
     const examples = data.slice(0,4)
 
