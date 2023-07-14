@@ -80,12 +80,11 @@
 </template>
 
 <script setup>
-    import { createClient } from '@supabase/supabase-js'
     useServerSeoMeta({
 		title: 'Портфолио',
 		lang: 'ru'
 	})
 
-    const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY) 
+    const supabase = useSupabaseClient() 
     const { data } = await supabase.from('examples').select()
 </script>

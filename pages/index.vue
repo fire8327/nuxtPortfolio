@@ -37,14 +37,13 @@
 </template>
 
 <script setup>
-    import { createClient } from '@supabase/supabase-js'
     useServerSeoMeta({
 		title: 'Главная',
 		lang: 'ru'
 	})
 
     
-    const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY) 
+    const supabase = useSupabaseClient() 
     const { data } = await supabase.from('examples').select()
     const examples = data.slice(0,4)
 
