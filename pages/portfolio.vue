@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col gap-6 lg:gap-8 items-center">
+    <div class="flex flex-col gap-6 lg:gap-8 items-center mt-12 lg:mt-16">
         <p class="text-2xl md:text-3xl lg:text-4xl uppercase text-center">Профессиональное творчество</p>
         <p class="text-sm text-[#131313]/60 dark:text-[#f9f9f9]/60 uppercase">Мои работы - ваше впечатление</p>        
         <NuxtLink to="/feedback" class="flex items-center gap-4 w-fit rounded-full relative p-2 group">
@@ -14,7 +14,7 @@
     <div class="flex max-lg:flex-col items-center gap-6 lg:gap-8 py-6 lg:py-8 border-y border-[#131313]/60 dark:border-[#f9f9f9]/60">
         <div class="w-full lg:w-1/2 uppercase flex flex-col gap-6">
             <p class="text-2xl md:text-3xl lg:text-4xl max-lg:text-center">План выполнения работ</p>
-            <p class="text-lg text-[#131313]/60 dark:text-[#f9f9f9]/60">Наглядное представление нашего с вами сотрудничества. Вместе мы создадим высококачественный и эффективный веб-сайт.</p>
+            <p class="text-lg text-[#131313]/60 dark:text-[#f9f9f9]/60 max-lg:text-center">Наглядное представление нашего с вами сотрудничества. Вместе мы создадим высококачественный и эффективный веб-сайт.</p>
         </div>
         <div class="w-full lg:w-1/2">
             <ol class="border-l border-[#131313]/60 dark:border-[#f9f9f9]/60">

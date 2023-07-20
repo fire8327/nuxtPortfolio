@@ -1,8 +1,8 @@
 <template>
-    <div class="flex max-lg:flex-col items-center gap-6 lg:gap-8 py-6 lg:py-8 border-y border-[#131313]/60 dark:border-[#f9f9f9]/60">
+    <div class="flex max-lg:flex-col items-center gap-6 lg:gap-8 py-6 lg:py-8 border-y border-[#131313]/60 dark:border-[#f9f9f9]/60 mt-12 lg:mt-16">
         <div class="w-full lg:w-1/2 uppercase flex flex-col gap-6">
             <p class="text-2xl md:text-3xl lg:text-4xl max-lg:text-center">Фронтенд разработка</p>
-            <p class="text-lg text-[#131313]/60 dark:text-[#f9f9f9]/60">Если <span class="text-transparent !bg-clip-text animate-text">вы</span> ищете человека, который поможет вам реализовать крутой проект и подобрать лучшее решение, тогда вы обратились <span class="text-transparent !bg-clip-text animate-text">по адресу</span>. Вместе мы выведем ваш сайт на новый уровень.</p>
+            <p class="text-lg text-[#131313]/60 dark:text-[#f9f9f9]/60 max-lg:text-center">Если <span class="text-transparent !bg-clip-text animate-text">вы</span> ищете человека, который поможет вам реализовать крутой проект и подобрать лучшее решение, тогда вы обратились <span class="text-transparent !bg-clip-text animate-text">по адресу</span>. Вместе мы выведем ваш сайт на новый уровень.</p>
         </div>
         <img src="/images/about/main.png" alt="" class="w-full lg:w-1/2">
     </div>
@@ -10,7 +10,7 @@
     <div class="flex max-lg:flex-col items-center gap-6 lg:gap-8 py-6 lg:py-8 border-y border-[#131313]/60 dark:border-[#f9f9f9]/60">
         <div class="w-full lg:w-1/2 uppercase flex flex-col gap-6">
             <p class="text-2xl md:text-3xl lg:text-4xl max-lg:text-center">Навыки</p>
-            <p class="text-lg text-[#131313]/60 dark:text-[#f9f9f9]/60">Я умею создавать сайты с нуля, имея лишь макет, разрабатывать пользовательские интерфейсы, и обладаю опытом веб-разработки на различных платформах и фреймворках, а также помогу разместить ваш проект на GitHub.</p>
+            <p class="text-lg text-[#131313]/60 dark:text-[#f9f9f9]/60 max-lg:text-center">Я умею создавать сайты с нуля, имея лишь макет, разрабатывать пользовательские интерфейсы, и обладаю опытом веб-разработки на различных платформах и фреймворках, а также помогу разместить ваш проект на GitHub.</p>
         </div>
         <div class="w-full lg:w-1/2 flex flex-col gap-6">
             <div class="flex flex-col gap-2">
