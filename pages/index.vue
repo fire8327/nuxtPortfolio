@@ -6,8 +6,9 @@
             <p>Перевоплощаю идеи в код.</p>
         </div>
         <div class="absolute bg-[#131313] bg-opacity-30 inset-0"></div>
+        <Scroll/>
     </div>
-    <div class="flex flex-col items-center text-center gap-6 lg:gap-8 uppercase">
+    <div class="flex flex-col items-center text-center gap-6 lg:gap-8 uppercase" id="text">
         <p class="text-2xl md:text-3xl lg:text-4xl">Краткая информация обо мне</p>
         <p class="text-lg text-[#131313]/60 dark:text-[#f9f9f9]/60">Меня зовут Леонид. Я Веб-разработчик. Специализируюсь на фронтенде и использую tailwindcss для вёрстки сайтов. Изучаю vue и nuxt. Надеюсь, вы <span class="text-transparent !bg-clip-text animate-text">горите своим делом</span> также, как я.</p>
         <div class="grid grid-cols-2 items-center w-full lg:w-1/2">

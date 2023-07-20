@@ -15,6 +15,7 @@
             </button>	
         </div>
         <div class="absolute bg-[#131313] bg-opacity-60 inset-0"></div>
+        <Scroll/>
     </div>
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div class="relative p-4 border border-[#131313]/60 dark:border-[#f9f9f9]/60 flex flex-col items-center text-center gap-4 text-lg">
