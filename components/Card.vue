@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col gap-2 md:gap-4 lg:gap-6">
-        <NuxtLink :to="link" target="_blank"><img :src="'/images/examples/'+img" alt="" class="w-full rounded-xl aspect-video object-cover"></NuxtLink>
+        <NuxtLink :to="link" target="_blank"><NuxtImg :src="'/images/examples/'+img" alt="" class="w-full rounded-xl aspect-video object-cover"/></NuxtLink>
         <div class="flex items-center gap-2">
             <p v-for="tag in tags" class="px-4 py-1 rounded-full opacity-60 border border-[#131313] dark:border-[#f9f9f9] shrink-0">{{ tag }}</p>
         </div>

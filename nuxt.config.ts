@@ -10,7 +10,8 @@ export default defineNuxtConfig({
     "@vueuse/motion/nuxt",
     "nuxt-icons",
     "@nuxt/content",
-    '@nuxtjs/supabase'
+    '@nuxtjs/supabase',
+    '@nuxt/image'
   ],
   googleFonts: {
     families: {

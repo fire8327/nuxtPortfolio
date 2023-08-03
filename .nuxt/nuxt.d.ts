@@ -8,6 +8,7 @@
 /// <reference types="nuxt-icons" />
 /// <reference types="@nuxt/content" />
 /// <reference types="@nuxtjs/supabase" />
+/// <reference types="@nuxt/image" />
 /// <reference types="@nuxt/devtools" />
 /// <reference types="@nuxt/telemetry" />
 /// <reference types="nuxt" />
