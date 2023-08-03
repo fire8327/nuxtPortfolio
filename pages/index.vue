@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col justify-center min-h-screen bg-cover bg-[url(/images/entry/1.jpg)] w-full col-span-full -mt-20 bg-center relative bg-fixed">
+    <div class="flex flex-col justify-center min-h-screen bg-cover bg-[url(/images/entry/1.webp)] w-full col-span-full -mt-20 bg-center relative bg-fixed">
         <div class="wrapper flex flex-col gap-8 md:gap-12 lg:gap-16 z-10 text-[#f9f9f9] text-2xl md:text-3xl lg:text-4xl">
             <p>Привет!</p>
             <p class="text-5xl md:text-6xl lg:text-7xl">Я — Веб-разработчик</p>
