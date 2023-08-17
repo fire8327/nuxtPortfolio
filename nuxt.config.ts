@@ -10,8 +10,7 @@ export default defineNuxtConfig({
     "@vueuse/motion/nuxt",
     "nuxt-icons",
     "@nuxt/content",
-    '@nuxtjs/supabase',
-    '@nuxt/image'
+    '@nuxtjs/supabase'
   ],
   googleFonts: {
     families: {
@@ -20,8 +19,5 @@ export default defineNuxtConfig({
   },
   vue: {
     propsDestructure: true
-  },
-  image: {
-    dir: '/public'
-}
+  }
 })

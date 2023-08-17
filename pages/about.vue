@@ -4,7 +4,7 @@
             <p class="text-2xl md:text-3xl lg:text-4xl max-lg:text-center">Фронтенд разработка</p>
             <p class="text-lg text-[#131313]/60 dark:text-[#f9f9f9]/60 max-lg:text-center">Если <span class="text-transparent !bg-clip-text animate-text">вы</span> ищете человека, который поможет вам реализовать крутой проект и подобрать лучшее решение, тогда вы обратились <span class="text-transparent !bg-clip-text animate-text">по адресу</span>. Вместе мы выведем ваш сайт на новый уровень.</p>
         </div>
-        <NuxtImg src="/images/about/main.png" alt="" class="w-full lg:w-1/2"/>
+        <img src="/images/about/main.png" alt="" class="w-full lg:w-1/2"/>
     </div>
     <CoopOptions/>
     <div class="flex max-lg:flex-col items-center gap-6 lg:gap-8 py-6 lg:py-8 border-y border-[#131313]/60 dark:border-[#f9f9f9]/60">
