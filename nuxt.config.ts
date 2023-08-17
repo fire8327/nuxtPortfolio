@@ -22,6 +22,6 @@ export default defineNuxtConfig({
     propsDestructure: true
   },
   image: {
-    dir: 'public'
+    dir: '/public'
 }
 })
