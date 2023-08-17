@@ -20,5 +20,8 @@ export default defineNuxtConfig({
   },
   vue: {
     propsDestructure: true
-  }
+  },
+  image: {
+    dir: 'public'
+}
 })
