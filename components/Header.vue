@@ -2,7 +2,7 @@
     <header class="w-full py-2 top-0 left-0 duration-500 transition-all fixed z-50 grid-container" :class="{'-translate-y-full' : isScrollDown, 'bg-[#f9f9f9] dark:bg-[#131313]' : isMenuColor}">
         <div class="flex items-center justify-between">
             <NuxtLink to="/" @click="isMenuShow = false">
-                <img format="webp" src="/images/header/logo.jpg" alt="" class="rounded-full w-14"/>
+                <img src="/images/header/logo.webp" alt="" class="rounded-full w-14"/>
             </NuxtLink>      
             <div class="flex items-center gap-4">
                 <UseDark v-slot="{ isDark, toggleDark }">
