@@ -9,7 +9,7 @@
         </NuxtLink>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
-        <Card v-for="site in data" v-bind="site"/>
+        <Card v-for="site in examples" v-bind="site"/>
     </div>
     <div class="flex max-lg:flex-col items-center gap-6 lg:gap-8 py-6 lg:py-8 border-y border-[#131313]/60 dark:border-[#f9f9f9]/60">
         <div class="w-full lg:w-1/2 uppercase flex flex-col gap-6">
@@ -86,5 +86,5 @@
 	})
 
     const supabase = useSupabaseClient() 
-    const { data } = await supabase.from('examples').select()
+    const { data: examples } = await useAsyncData('examples', async() => supabase.from('examples').select(), {transform: result => result.data})
 </script>

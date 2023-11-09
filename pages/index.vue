@@ -45,7 +45,5 @@
 
     
     const supabase = useSupabaseClient() 
-    const { data } = await supabase.from('examples').select()
-    const examples = data.slice(0,4)
-
+    const { data: examples } = await useAsyncData('examples', async() => supabase.from('examples').select(), {transform: result => result.data.slice(0, 4)})
 </script>
