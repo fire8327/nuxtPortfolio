@@ -86,5 +86,5 @@
 	})
 
     const supabase = useSupabaseClient() 
-    const { data: examples } = await useAsyncData('examples', async() => supabase.from('examples').select(), {transform: result => result.data})
+    const { data: examples } = await useAsyncData('examples', async() => supabase.from('examples').select("*"), {transform: result => result.data})
 </script>

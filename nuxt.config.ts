@@ -10,7 +10,8 @@ export default defineNuxtConfig({
     "@vueuse/motion/nuxt",
     "nuxt-icons",
     "@nuxt/content",
-    '@nuxtjs/supabase'
+    '@nuxtjs/supabase',
+    "@nuxt/image"
   ],
   googleFonts: {
     families: {
@@ -19,5 +20,14 @@ export default defineNuxtConfig({
   },
   vue: {
     propsDestructure: true
+  },
+  supabase: {
+    redirect: false
+  },
+  image: {
+    provider: 'netlify',
+    netlify: {
+      baseURl: process.env.IMAGES_URL
+    }
   }
 })
